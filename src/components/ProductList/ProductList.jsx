@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import './ProductList.css';
 import ProductItem from "../ProductItem/ProductItem";
 import {useTelegram} from "../../hooks/useTelegram";
 import {useCallback, useEffect} from "react";
+
 
 const products = [
     {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цвета, прямые'},
@@ -29,8 +30,8 @@ const ProductList = () => {
     const onSendData = useCallback(() => {
         const data = {
             queryId,
-            products: addedItems,
-            totalPrice: getTotalPrice(addedItems),
+            //products: addedItems,
+            //totalPrice: getTotalPrice(addedItems),
         }
         fetch('http://46.161.52.238:8000/web-data', {
             method: 'POST',
