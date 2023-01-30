@@ -13,6 +13,7 @@ const products = [
     {id: '6', title: 'Куртка 7', price: 600, description: 'Зеленого цвета, теплая'},
     {id: '7', title: 'Джинсы 4', price: 5500, description: 'Синего цвета, прямые'},
     {id: '8', title: 'Куртка 5', price: 12000, description: 'Зеленого цвета, теплая'},
+    {id: '8', title: 'Ипотека ЮЛ', price: 120, description: 'Ипотека для Юридических лиц'},
 ]
 
 const getTotalPrice = (items = []) => {
@@ -31,7 +32,7 @@ const ProductList = () => {
             totalPrice: getTotalPrice(addedItems),
             queryId,
         }
-        fetch('http://85.119.146.179:8000/web-data', {
+        fetch('http://46.161.52.238:8000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
